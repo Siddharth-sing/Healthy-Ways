@@ -1,21 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--TODO(Step 3 - This is added by Default when you create new Activity and can add the components as per requirement.)-->
+<!--START-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ExerciseActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ExerciseActivity">
 
+    <!--Here we have added list of points
+    1. Added required custom background layout, text, color, size in
+    respective folder as in DRAWABLE, VALUES of (color.xml, dimen.xml, string.xml).
+    -->
+
+    <!--TODO(Step 4 - Adding a toolbar to display a title)-->
+    <!--Step 4 START-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_exercise_activity"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="#0091EA"
-        app:titleTextColor="#FF6D00"
-        android:theme="@style/toolbar_theme"
-        />
+        android:background="#FFFFFF" />
+    <!--Step 4 END-->
 
+    <!--TODO(Step 6 - Adding a view for the Get Ready Screen with a progress bar and remaining time text for the timer.)-->
+    <!--Step 6 START-->
     <LinearLayout
         android:id="@+id/llRestView"
         android:layout_width="match_parent"
@@ -70,5 +77,5 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
-
-</RelativeLayout>
+    <!--Step 6 END-->
+</RelativeLayout><!--END-->
