@@ -14,8 +14,8 @@ class ExerciseActivity : AppCompatActivity() {
     private var restProgress = 0
     private var exerciseProgress = 0
 
-
-
+    private var exerciseList: ArrayList<ExerciseModel>? = null
+    private var currentExercisePosition = -1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +32,8 @@ class ExerciseActivity : AppCompatActivity() {
         }
 
         setUpRestView()
+
+        exerciseList = Constants.defaultExerciseList()
 
     }
 
@@ -76,6 +78,7 @@ class ExerciseActivity : AppCompatActivity() {
     private fun setExerciseProgressBar(){
         exerciseProgressBar.progress = exerciseProgress
         exerciseTimer = object: CountDownTimer(30000,1000){
+
             override fun onTick(millisUntilFinished: Long) {
                 exerciseProgress++
                 exerciseProgressBar.progress = 30 - exerciseProgress
@@ -98,5 +101,8 @@ class ExerciseActivity : AppCompatActivity() {
         }
         llExerciseView.visibility = View.VISIBLE
         setExerciseProgressBar()
+
+
+
     }
 }
