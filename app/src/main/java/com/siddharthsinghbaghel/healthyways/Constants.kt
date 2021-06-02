@@ -49,7 +49,7 @@ class Constants {
               exerciseList.add(stepUpOnChair)
 
               val  squat= ExerciseModel(6,
-                      "Step Up On Chair",
+                      "Squats",
                       R.drawable.ic_squat,
                       isCompleted = false,
                       isSelected = false
@@ -57,7 +57,7 @@ class Constants {
               exerciseList.add(squat)
 
               val  tricepsDipOnChair= ExerciseModel(7,
-                      "Step Up On Chair",
+                      "Triceps Dip On Chair",
                       R.drawable.ic_triceps_dip_on_chair,
                       isCompleted = false,
                       isSelected = false
@@ -65,7 +65,7 @@ class Constants {
               exerciseList.add(tricepsDipOnChair)
 
               val  plank = ExerciseModel(8,
-                      "Step Up On Chair",
+                      "Plank",
                       R.drawable.ic_plank,
                       isCompleted = false,
                       isSelected = false
@@ -73,7 +73,7 @@ class Constants {
               exerciseList.add(plank)
 
               val  highKneesRunning = ExerciseModel(9,
-                      "Step Up On Chair",
+                      "High Knees Running In Place",
                       R.drawable.ic_high_knees_running_in_place,
                       isCompleted = false,
                       isSelected = false
@@ -81,7 +81,7 @@ class Constants {
               exerciseList.add(highKneesRunning)
 
               val  lunges = ExerciseModel(10,
-                      "Step Up On Chair",
+                      "Lunges",
                       R.drawable.ic_lunge,
                       isCompleted = false,
                       isSelected = false
@@ -90,7 +90,7 @@ class Constants {
 
 
               val pushUpsAndRotation = ExerciseModel(11,
-                      "Step Up On Chair",
+                      "Push Ups And Rotation",
                       R.drawable.ic_push_up_and_rotation,
                       isCompleted = false,
                       isSelected = false
@@ -98,7 +98,7 @@ class Constants {
               exerciseList.add(pushUpsAndRotation)
 
               val sidePlank = ExerciseModel(12,
-                      "Step Up On Chair",
+                      "Side Plank",
                       R.drawable.ic_side_plank,
                       isCompleted = false,
                       isSelected = false
