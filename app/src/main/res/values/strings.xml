@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Healthy Ways</string>
     <string name="start">START</string>
-    <string name="image">image</string>
+    <string name="image">Exercise Image</string>
+    <string name="upcoming_exercise">Upcoming Exercise :</string>
+    <string name="exercise_name">Exercise Name</string>
 </resources>

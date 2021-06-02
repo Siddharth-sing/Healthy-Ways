@@ -69,6 +69,31 @@
                     tools:text="10" />
             </LinearLayout>
         </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvUpcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upcoming_exercise"
+            android:textSize="24sp"
+            android:textColor="@color/grey_blue"
+            android:contentDescription="@string/upcoming_exercise"
+            android:padding="5dp"
+            android:layout_marginTop="16dp"
+            />
+        <TextView
+            android:id="@+id/tvUpCExerciseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/exercise_name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:contentDescription="@string/upcoming_exercise"
+            android:padding="5dp"
+            android:layout_marginBottom="16dp"
+
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +105,18 @@
         android:orientation="vertical"
         android:visibility="gone">
 
+       <ImageView
+           android:id="@+id/ivImage_Exercise"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:scaleType="fitXY"
+           android:layout_weight="1"
+           android:contentDescription="@string/image"
+           android:src="@drawable/ic_jumping_jacks"
+           />
+
         <TextView
+            android:id="@+id/tvExerciseName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Exercise Name"
@@ -92,6 +128,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/item_circular_color_accent_border">
 
             <ProgressBar
@@ -124,6 +161,9 @@
                     tools:text="30" />
             </LinearLayout>
         </FrameLayout>
+
+
+
     </LinearLayout>
 
 </RelativeLayout>
