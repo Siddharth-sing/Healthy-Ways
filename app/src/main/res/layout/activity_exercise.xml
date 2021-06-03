@@ -103,7 +103,10 @@
         android:layout_below="@id/toolbar_exercise_activity"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:layout_above="@+id/rvExerciseStatus">
 
        <ImageView
            android:id="@+id/ivImage_Exercise"
@@ -162,8 +165,16 @@
             </LinearLayout>
         </FrameLayout>
 
-
-
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExerciseStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        tools:itemCount="1"
+        />
 
 </RelativeLayout>
