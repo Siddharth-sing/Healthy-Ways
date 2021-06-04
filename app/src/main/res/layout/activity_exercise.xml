@@ -11,8 +11,7 @@
         android:id="@+id/toolbar_exercise_activity"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="#0091EA"
-        app:titleTextColor="#FF6D00"
+        android:background="#FFFFFF"
         android:theme="@style/toolbar_theme"
         />
 

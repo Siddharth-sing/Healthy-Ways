@@ -11,15 +11,15 @@
         android:theme="@style/Theme.HealthyWays">
         <activity android:name=".BMICalculatorActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.HealthyWays" />
         <activity
             android:name=".ExerciseFinishActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.HealthyWays" />
         <activity
             android:name=".ExerciseActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.HealthyWays" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
