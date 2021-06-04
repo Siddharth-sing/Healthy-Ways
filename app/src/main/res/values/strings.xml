@@ -5,4 +5,6 @@
     <string name="upcoming_exercise">Upcoming Exercise :</string>
     <string name="exercise_name">Exercise Name</string>
     <string name="light_black">#212121</string>
+    <string name="dialog_yes">YES</string>
+    <string name="dialog_no">NO</string>
 </resources>

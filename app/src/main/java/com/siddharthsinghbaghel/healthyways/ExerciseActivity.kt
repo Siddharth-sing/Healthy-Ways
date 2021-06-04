@@ -1,5 +1,6 @@
   package com.siddharthsinghbaghel.healthyways
 
+import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_exercise.*
+import kotlinx.android.synthetic.main.dialog_custom_back_conformation.*
 import kotlinx.android.synthetic.main.item_exercise_status.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -39,7 +41,10 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setSupportActionBar(toolbar_exercise_activity)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toolbar_exercise_activity.setNavigationOnClickListener {
-            onBackPressed()
+
+            setCustomDialogBckButton()
+
+
         }
 
         tts = TextToSpeech(this,this)
@@ -107,12 +112,11 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         progressBar.progress = restProgress
 
-        restTimer = object : CountDownTimer(2000, 1000) {
+        restTimer = object : CountDownTimer(5000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
-                progressBar.progress = 2 - restProgress
-                tvTimer.text =
-                        (2 - restProgress).toString()
+                progressBar.progress = 5 - restProgress
+                tvTimer.text = (5 - restProgress).toString()
             }
 
             override fun onFinish() {
@@ -151,11 +155,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         progressBar.progress = exerciseProgress
 
-        exerciseTimer = object : CountDownTimer(2000, 1000) {
+        exerciseTimer = object : CountDownTimer(5000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 exerciseProgress++
-                progressBar.progress = 2 - exerciseProgress
-                tvExerciseTimer.text = (2 - exerciseProgress).toString()
+
+                exerciseProgressBar.progress = 5 - exerciseProgress
+                tvExerciseTimer.text = (5 - exerciseProgress).toString()
             }
 
             override fun onFinish() {
@@ -220,6 +225,21 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         exerciseAdapter = ExerciseStatusAdapter(exerciseList!!,this)
         rvExerciseStatus.adapter = exerciseAdapter
+    }
+
+    private fun setCustomDialogBckButton(){
+
+         val customDialog = Dialog(this)
+        customDialog.setContentView(R.layout.dialog_custom_back_conformation)
+        customDialog.tvYes.setOnClickListener{
+            finish()
+            customDialog.dismiss()
+        }
+        customDialog.tvNo.setOnClickListener{
+            customDialog.dismiss()
+        }
+
+        customDialog.show()
     }
 
 

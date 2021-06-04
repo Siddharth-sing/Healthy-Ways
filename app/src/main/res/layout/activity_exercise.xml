@@ -23,7 +23,7 @@
         android:layout_below="@id/toolbar_exercise_activity"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
         android:layout_below="@id/toolbar_exercise_activity"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_margin="10dp"
         android:padding="5dp"
         android:layout_above="@+id/rvExerciseStatus">
@@ -125,7 +125,8 @@
             android:text="Exercise Name"
             android:textColor="@color/colorAccent"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:padding="5dp"/>
 
         <FrameLayout
             android:layout_width="100dp"
