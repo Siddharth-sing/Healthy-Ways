@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthyWays">
-        <activity android:name=".BMICalculatorActivity"
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HealthyWays"
+            />
+        <activity
+            android:name=".BMICalculatorActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HealthyWays" />
         <activity

@@ -12,14 +12,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         llStart.setOnClickListener{
-            Toast.makeText(this, "Here started exercising", Toast.LENGTH_SHORT).show()
             val intent = Intent(this,ExerciseActivity::class.java)
             startActivity(intent)
         }
 
         llBMI.setOnClickListener{
-            Toast.makeText(this, "Calculate BMI", Toast.LENGTH_SHORT).show()
             val intent = Intent(this,BMICalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
+        llHistory.setOnClickListener{
+            val intent = Intent(this,HistoryActivity::class.java)
             startActivity(intent)
         }
     }
