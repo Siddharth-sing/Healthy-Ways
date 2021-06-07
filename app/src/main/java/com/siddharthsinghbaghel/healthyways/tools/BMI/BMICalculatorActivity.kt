@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.siddharthsinghbaghel.healthyways.R
+import com.siddharthsinghbaghel.healthyways.room.BMIHistoryEntity
+import com.siddharthsinghbaghel.healthyways.room.BMIHistoryViewModel
 import kotlinx.android.synthetic.main.activity_bmi.*
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -15,6 +18,7 @@ import kotlin.math.pow
 class BMICalculatorActivity : AppCompatActivity() {
 
 
+    lateinit var viewModel: BMIHistoryViewModel
     val METRIC_UNITS_VIEW = "METRIC_UNITS_VIEW"
     val US_UNITS_VIEW = "US_UNITS_VIEW"
     var currentVisibleView: String = "METRIC_UNITS_VIEW"
@@ -33,8 +37,10 @@ class BMICalculatorActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        btnCalculateUnits.setOnClickListener {
+        viewModel = ViewModelProvider(this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(BMIHistoryViewModel::class.java)
 
+        btnCalculateUnits.setOnClickListener {
 
             if(validateMetricUnits()){
 
@@ -81,8 +87,6 @@ class BMICalculatorActivity : AppCompatActivity() {
         /* Radio btn check listener*/
 
              
-         
-
     }
 
 
@@ -125,58 +129,66 @@ class BMICalculatorActivity : AppCompatActivity() {
 
 
 
-     private fun calculateBMI(heightValue: Float, weightValue: Float){
+         private fun calculateBMI(heightValue: Float, weightValue: Float){
 
-         var resultBMI: Double = 0.0
+             var resultBMI: Double = 0.0
 
-         when (currentVisibleView) {
-             METRIC_UNITS_VIEW -> {
-                 resultBMI = (weightValue / heightValue.toDouble().pow(2.0))
+             when (currentVisibleView) {
+                 METRIC_UNITS_VIEW -> {
+                     resultBMI = (weightValue / heightValue.toDouble().pow(2.0))
+                 }
+                 US_UNITS_VIEW -> {
+                     resultBMI = (weightValue / heightValue.toDouble().pow(2.0)) * 703
+                 }
              }
-             US_UNITS_VIEW -> {
-                 resultBMI = (weightValue / heightValue.toDouble().pow(2.0)) * 703
+
+
+             val bmiLabel: String
+             val bmiDescription: String
+
+            if (resultBMI.compareTo(15f) <= 0) {
+                bmiLabel = "Very severely underweight"
+                bmiDescription = "Oops! You really need to take better care of yourself! Eat more!"
+            } else if (resultBMI.compareTo(15f) > 0 && resultBMI.compareTo(16f) <= 0) {
+                bmiLabel = "Severely underweight"
+                bmiDescription = "Oops!You really need to take better care of yourself! Eat more!"
+            } else if (resultBMI.compareTo(16f) > 0 && resultBMI.compareTo(18.5f) <= 0) {
+                bmiLabel = "Underweight"
+                bmiDescription = "Oops! You really need to take better care of yourself! Eat more!"
+            } else if (resultBMI.compareTo(18.5f) > 0 && resultBMI.compareTo(25f) <= 0) {
+                bmiLabel = "Normal"
+                bmiDescription = "Congratulations! You are in a good shape!"
+            } else if (resultBMI.compareTo(25f) > 0 && resultBMI.compareTo(30f) <=0 ) {
+                bmiLabel = "Overweight"
+                bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
+            } else if (resultBMI.compareTo(30f) > 0 && resultBMI.compareTo(35f) <= 0) {
+                bmiLabel = "Obese Class | (Moderately obese)"
+                bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
+            } else if (resultBMI.compareTo(35f) > 0 && resultBMI.compareTo(40f) <= 0) {
+                bmiLabel = "Obese Class || (Severely obese)"
+                bmiDescription = "OMG! You are in a very dangerous condition! Act now!"
+            } else {
+                bmiLabel = "Obese Class ||| (Very Severely obese)"
+                bmiDescription = "OMG! You are in a very dangerous condition! Act now!"
+            }
+
+            llDisplayBMIResult.visibility = View.VISIBLE
+
+            val bmiValue = BigDecimal(resultBMI.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
+
+            tvBMIValue.text = bmiValue
+            tvBMIType.text = bmiLabel
+            tvBMIDescription.text = bmiDescription
+
+
+             if(bmiValue.isNotEmpty() && bmiLabel.isNotEmpty()) {
+                 viewModel.insertBMIHistory(BMIHistoryEntity(bmiValue,bmiLabel))
+                 Toast.makeText(this, "$bmiValue Inserted", Toast.LENGTH_SHORT).show()
+             }else{
+                 Toast.makeText(this, "Invalid Entry", Toast.LENGTH_SHORT).show()
              }
+
          }
-
-
-         val bmiLabel: String
-         val bmiDescription: String
-
-        if (resultBMI.compareTo(15f) <= 0) {
-            bmiLabel = "Very severely underweight"
-            bmiDescription = "Oops! You really need to take better care of yourself! Eat more!"
-        } else if (resultBMI.compareTo(15f) > 0 && resultBMI.compareTo(16f) <= 0) {
-            bmiLabel = "Severely underweight"
-            bmiDescription = "Oops!You really need to take better care of yourself! Eat more!"
-        } else if (resultBMI.compareTo(16f) > 0 && resultBMI.compareTo(18.5f) <= 0) {
-            bmiLabel = "Underweight"
-            bmiDescription = "Oops! You really need to take better care of yourself! Eat more!"
-        } else if (resultBMI.compareTo(18.5f) > 0 && resultBMI.compareTo(25f) <= 0) {
-            bmiLabel = "Normal"
-            bmiDescription = "Congratulations! You are in a good shape!"
-        } else if (resultBMI.compareTo(25f) > 0 && resultBMI.compareTo(30f) <=0 ) {
-            bmiLabel = "Overweight"
-            bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
-        } else if (resultBMI.compareTo(30f) > 0 && resultBMI.compareTo(35f) <= 0) {
-            bmiLabel = "Obese Class | (Moderately obese)"
-            bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
-        } else if (resultBMI.compareTo(35f) > 0 && resultBMI.compareTo(40f) <= 0) {
-            bmiLabel = "Obese Class || (Severely obese)"
-            bmiDescription = "OMG! You are in a very dangerous condition! Act now!"
-        } else {
-            bmiLabel = "Obese Class ||| (Very Severely obese)"
-            bmiDescription = "OMG! You are in a very dangerous condition! Act now!"
-        }
-
-        llDisplayBMIResult.visibility = View.VISIBLE
-
-        val bmiValue = BigDecimal(resultBMI.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
-
-        tvBMIValue.text = bmiValue
-        tvBMIType.text = bmiLabel
-        tvBMIDescription.text = bmiDescription
-
-    }
 
     private fun validateMetricUnits(): Boolean{
 

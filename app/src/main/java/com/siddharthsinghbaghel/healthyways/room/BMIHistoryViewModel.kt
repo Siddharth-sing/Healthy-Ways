@@ -18,11 +18,11 @@ class BMIHistoryViewModel(application: Application): AndroidViewModel(applicatio
     }
 
     /*viewModelScope.launch(Dispatchers.IO) - coroutines used to avoid async task*/
-    fun deleteContact(bmiHistory : BMIHistoryEntity) = viewModelScope.launch(Dispatchers.IO) {
+    fun deleteBMIHistory(bmiHistory : BMIHistoryEntity) = viewModelScope.launch(Dispatchers.IO) {
         bmiRepository.delete(bmiHistory)
     }
 
-    fun insertContact(bmiHistory : BMIHistoryEntity) = viewModelScope.launch(Dispatchers.IO) {
+    fun insertBMIHistory(bmiHistory : BMIHistoryEntity) = viewModelScope.launch(Dispatchers.IO) {
         bmiRepository.insert(bmiHistory)
     }
 

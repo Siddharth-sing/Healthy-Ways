@@ -14,7 +14,7 @@
         android:background="#FFFFFF" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAllContacts"
+        android:id="@+id/rvAllBmiHistory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/bmi_item"

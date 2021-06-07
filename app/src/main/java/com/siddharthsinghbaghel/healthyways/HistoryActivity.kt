@@ -1,7 +1,9 @@
 package com.siddharthsinghbaghel.healthyways
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.siddharthsinghbaghel.healthyways.tools.BMI.BMIHistoryViewActivity
 
 import kotlinx.android.synthetic.main.activity_history.*
 
@@ -17,6 +19,12 @@ class HistoryActivity : AppCompatActivity() {
         actionBar!!.title = "History"
         toolbar_history_activity.setNavigationOnClickListener {
             onBackPressed()
+        }
+
+        llBMIHistory.setOnClickListener {
+
+            val intent = Intent(this,BMIHistoryViewActivity::class.java)
+            startActivity(intent)
         }
 
     }
