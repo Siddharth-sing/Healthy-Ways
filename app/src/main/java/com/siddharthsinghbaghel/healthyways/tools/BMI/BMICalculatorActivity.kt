@@ -1,12 +1,13 @@
-package com.siddharthsinghbaghel.healthyways
+package com.siddharthsinghbaghel.healthyways.tools.BMI
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.style.MetricAffectingSpan
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import com.siddharthsinghbaghel.healthyways.R
 import kotlinx.android.synthetic.main.activity_bmi.*
-import java.lang.Math.pow
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.pow
@@ -33,6 +34,7 @@ class BMICalculatorActivity : AppCompatActivity() {
         }
 
         btnCalculateUnits.setOnClickListener {
+
 
             if(validateMetricUnits()){
 

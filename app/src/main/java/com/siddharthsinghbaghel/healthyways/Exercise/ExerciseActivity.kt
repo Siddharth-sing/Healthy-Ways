@@ -1,4 +1,4 @@
-  package com.siddharthsinghbaghel.healthyways
+  package com.siddharthsinghbaghel.healthyways.Exercise
 
 import android.app.Dialog
 import android.content.Intent
@@ -7,10 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.siddharthsinghbaghel.healthyways.Constants
+import com.siddharthsinghbaghel.healthyways.R
 import kotlinx.android.synthetic.main.activity_exercise.*
 import kotlinx.android.synthetic.main.dialog_custom_back_conformation.*
 import kotlinx.android.synthetic.main.item_exercise_status.*
@@ -174,7 +175,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
                 } else {
                     finish()
-                    val intent = Intent(this@ExerciseActivity,ExerciseFinishActivity::class.java)
+                    val intent = Intent(this@ExerciseActivity, ExerciseFinishActivity::class.java)
                     startActivity(intent)
                 }
 

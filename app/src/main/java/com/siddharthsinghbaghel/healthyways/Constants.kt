@@ -1,5 +1,7 @@
 package com.siddharthsinghbaghel.healthyways
 
+import com.siddharthsinghbaghel.healthyways.Exercise.ExerciseModel
+
 class Constants {
 
     /* companion is equal to static  */

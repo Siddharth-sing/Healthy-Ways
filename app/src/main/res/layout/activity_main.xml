@@ -107,7 +107,7 @@
                         <ImageView
                             android:layout_width="45dp"
                             android:layout_height="45dp"
-                            android:src="@drawable/ic_delete"
+                            android:src="@drawable/ic_history"
                             android:padding="5dp"/>
                     </LinearLayout>
 
