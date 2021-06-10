@@ -11,6 +11,7 @@ import com.siddharthsinghbaghel.healthyways.R
 import com.siddharthsinghbaghel.healthyways.room.BMIHistoryEntity
 import com.siddharthsinghbaghel.healthyways.room.BMIHistoryViewModel
 import kotlinx.android.synthetic.main.activity_bmi.*
+import kotlinx.android.synthetic.main.bmi_history_item.*
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.pow
@@ -180,9 +181,12 @@ class BMICalculatorActivity : AppCompatActivity() {
             tvBMIType.text = bmiLabel
             tvBMIDescription.text = bmiDescription
 
+            val bmiHeight: String = heightValue.toString()
+            val bmiWeight: String = weightValue.toString()
+
 
              if(bmiValue.isNotEmpty() && bmiLabel.isNotEmpty()) {
-                 viewModel.insertBMIHistory(BMIHistoryEntity(bmiValue,bmiLabel))
+                 viewModel.insertBMIHistory(BMIHistoryEntity(bmiValue,bmiLabel,bmiWeight,bmiHeight))
                  Toast.makeText(this, "$bmiValue Inserted", Toast.LENGTH_SHORT).show()
              }else{
                  Toast.makeText(this, "Invalid Entry", Toast.LENGTH_SHORT).show()

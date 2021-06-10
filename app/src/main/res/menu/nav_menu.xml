@@ -6,10 +6,11 @@
         android:title="@string/tools"/>
     <item
         android:id="@+id/sevenMinExercises"
-        android:icon="@drawable/ic_exercise"
-        android:title="@string/Exercise"/>
+        android:icon="@drawable/ic_exercise1"
+        android:title="@string/Exercise"
+        />
     <item
         android:id="@+id/history"
-        android:icon="@drawable/ic_history"
+        android:icon="@drawable/ic_hist"
         android:title="@string/history"/>
 </menu>

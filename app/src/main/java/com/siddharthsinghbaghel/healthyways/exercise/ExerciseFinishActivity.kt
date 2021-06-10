@@ -1,10 +1,10 @@
-package com.siddharthsinghbaghel.healthyways.Exercise
+package com.siddharthsinghbaghel.healthyways.exercise
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.siddharthsinghbaghel.healthyways.MainActivity
 import com.siddharthsinghbaghel.healthyways.R
+import com.siddharthsinghbaghel.healthyways.navFragments.ExerciseFragment
 import kotlinx.android.synthetic.main.activity_exercise_finish.*
 
 class ExerciseFinishActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class ExerciseFinishActivity : AppCompatActivity() {
         }
         btnFinishExercise.setOnClickListener{
             finish()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ExerciseFragment::class.java)
             startActivity(intent)
         }
     }

@@ -1,6 +1,6 @@
 package com.siddharthsinghbaghel.healthyways
 
-import com.siddharthsinghbaghel.healthyways.Exercise.ExerciseModel
+import com.siddharthsinghbaghel.healthyways.exercise.ExerciseModel
 
 class Constants {
 

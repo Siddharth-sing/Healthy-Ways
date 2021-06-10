@@ -1,4 +1,4 @@
-package com.siddharthsinghbaghel.healthyways.Exercise
+package com.siddharthsinghbaghel.healthyways.exercise
 
 import android.content.Context
 import android.graphics.Color

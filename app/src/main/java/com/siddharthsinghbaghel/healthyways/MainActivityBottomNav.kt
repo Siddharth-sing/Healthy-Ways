@@ -3,14 +3,14 @@ package com.siddharthsinghbaghel.healthyways
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.siddharthsinghbaghel.healthyways.NavFragments.ExerciseFragment
-import com.siddharthsinghbaghel.healthyways.NavFragments.HistoryFragment
-import com.siddharthsinghbaghel.healthyways.NavFragments.ToolsFragment
-import kotlinx.android.synthetic.main.activity_history.*
-import kotlinx.android.synthetic.main.activity_history.toolbar_history_activity
-import kotlinx.android.synthetic.main.activity_main_1.*
+import com.siddharthsinghbaghel.healthyways.navFragments.ExerciseFragment
+import com.siddharthsinghbaghel.healthyways.navFragments.HistoryFragment
+import com.siddharthsinghbaghel.healthyways.navFragments.ToolsFragment
+import kotlinx.android.synthetic.main.activity_main_bottom_nav.*
 
-class MainActivity1 : AppCompatActivity() {
+
+
+class MainActivityBottomNav : AppCompatActivity() {
 
     private val toolsFragment = ToolsFragment()
     private val historyFragment = HistoryFragment()
@@ -18,18 +18,16 @@ class MainActivity1 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_1)
+        setContentView(R.layout.activity_main_bottom_nav)
 
-        setSupportActionBar(toolbar_activity_main_1)
+        setSupportActionBar(toolbar_bottom_nav)
 
         val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.title = "History"
-        toolbar_history_activity.setNavigationOnClickListener {
-            onBackPressed()
-        }
+        actionBar!!.title = "🌟  Healthy Ways"
 
-        replaceFragments(exerciseFragment)
+
+
+        replaceFragments(toolsFragment)
 
         bottomNav.setOnNavigationItemSelectedListener {
 

@@ -9,6 +9,7 @@ import com.siddharthsinghbaghel.healthyways.BMIHistoryAdapter
 import com.siddharthsinghbaghel.healthyways.R
 import com.siddharthsinghbaghel.healthyways.room.BMIHistoryEntity
 import com.siddharthsinghbaghel.healthyways.room.BMIHistoryViewModel
+import kotlinx.android.synthetic.main.activity_bmi.*
 import kotlinx.android.synthetic.main.activity_bmi_history.*
 
 class BMIHistoryViewActivity : AppCompatActivity(), BMIHistoryAdapter.IBMIHistoryRVAdapter {
@@ -18,6 +19,16 @@ class BMIHistoryViewActivity : AppCompatActivity(), BMIHistoryAdapter.IBMIHistor
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmi_history)
+
+        setSupportActionBar(toolbar_bmi_history_activity)
+
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar!!.title = "BMI History"
+        toolbar_bmi_history_activity.setNavigationOnClickListener {
+
+            onBackPressed()
+        }
 
         val bmiHistoryRecyclerView = rvAllBmiHistory
         val adapter = BMIHistoryAdapter(this,this)

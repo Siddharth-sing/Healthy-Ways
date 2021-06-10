@@ -1,4 +1,4 @@
-package com.siddharthsinghbaghel.healthyways.Exercise
+package com.siddharthsinghbaghel.healthyways.exercise
 
 class ExerciseModel(
         private var id: Int,

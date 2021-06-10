@@ -9,26 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthyWays">
-        <activity android:name=".MainActivity1"></activity>
         <activity android:name=".tools.BMI.BMIHistoryViewActivity" />
-        <activity
-            android:name=".HistoryActivity"
-            android:label="@string/title_activity_history"
-            android:theme="@style/Theme.HealthyWays.NoActionBar" />
+
         <activity
             android:name=".tools.BMI.BMICalculatorActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HealthyWays" />
         <activity
-            android:name=".Exercise.ExerciseFinishActivity"
+            android:name=".exercise.ExerciseFinishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HealthyWays" />
         <activity
-            android:name=".Exercise.ExerciseActivity"
+            android:name=".exercise.ExerciseActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HealthyWays" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityBottomNav"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-  package com.siddharthsinghbaghel.healthyways.Exercise
+  package com.siddharthsinghbaghel.healthyways.exercise
 
 import android.app.Dialog
 import android.content.Intent
