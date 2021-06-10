@@ -21,7 +21,7 @@ class ToolsFragment : Fragment() {
         val myToolsFragmentView =  inflater.inflate(R.layout.fragment_tools, container, false)
 
 
-        myToolsFragmentView.llBMI.setOnClickListener{
+        myToolsFragmentView.cvBmi.setOnClickListener{
             val intent = Intent(context, BMICalculatorActivity::class.java)
             startActivity(intent)
         }
