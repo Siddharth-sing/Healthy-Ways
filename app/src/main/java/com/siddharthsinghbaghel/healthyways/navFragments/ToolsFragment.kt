@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.siddharthsinghbaghel.healthyways.R
 import com.siddharthsinghbaghel.healthyways.tools.BMI.BMICalculatorActivity
+import com.siddharthsinghbaghel.healthyways.tools.oneRM.OneRMCalculatorActivity
 import kotlinx.android.synthetic.main.fragment_tools.view.*
 
 class ToolsFragment : Fragment() {
@@ -23,6 +24,10 @@ class ToolsFragment : Fragment() {
 
         myToolsFragmentView.cvBmi.setOnClickListener{
             val intent = Intent(context, BMICalculatorActivity::class.java)
+            startActivity(intent)
+        }
+        myToolsFragmentView.cvOneRm.setOnClickListener{
+            val intent = Intent(context, OneRMCalculatorActivity::class.java)
             startActivity(intent)
         }
 

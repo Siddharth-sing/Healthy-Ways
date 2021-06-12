@@ -1,17 +1,14 @@
 package com.siddharthsinghbaghel.healthyways.tools.BMI
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.siddharthsinghbaghel.healthyways.R
 import com.siddharthsinghbaghel.healthyways.room.BMIHistoryEntity
 import com.siddharthsinghbaghel.healthyways.room.BMIHistoryViewModel
 import kotlinx.android.synthetic.main.activity_bmi.*
-import kotlinx.android.synthetic.main.bmi_history_item.*
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.pow
@@ -28,12 +25,12 @@ class BMICalculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmi)
 
-        setSupportActionBar(toolbar_bmi_activity)
+        setSupportActionBar(toolbar_oneRM_activity)
 
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar!!.title = "Calculator BMI"
-        toolbar_bmi_activity.setNavigationOnClickListener {
+        toolbar_oneRM_activity.setNavigationOnClickListener {
 
             onBackPressed()
         }
@@ -43,7 +40,7 @@ class BMICalculatorActivity : AppCompatActivity() {
 
         btnCalculateUnits.setOnClickListener {
 
-            if(validateMetricUnits()){
+            if(validateUnits()){
 
                 when (currentVisibleView) {
                     METRIC_UNITS_VIEW -> {
@@ -51,14 +48,14 @@ class BMICalculatorActivity : AppCompatActivity() {
                         val heightValue = etMetricUnitHeight.text.toString().toFloat() / 100
                         val weightValue = etMetricUnitWeight.text.toString().toFloat()
 
-                        calculateBMI(heightValue,weightValue).toString()
+                        calculateBMI(heightValue,weightValue)
                     }
                     US_UNITS_VIEW -> {
 
                          val heightValue = etUsUnitHeightFeet.text.toString().toFloat() * 12 + etUsUnitHeightInch.text.toString().toFloat()
                          val weightValue = etUsUnitWeight.text.toString().toFloat()
 
-                         calculateBMI(heightValue,weightValue).toString()
+                         calculateBMI(heightValue,weightValue)
                     }
                 }
             }else{
@@ -74,13 +71,13 @@ class BMICalculatorActivity : AppCompatActivity() {
 
         /* Radio btn check listener*/
 
-                    rgUnits.setOnCheckedChangeListener { group, checkedId ->
+                    rgUnitsBMI.setOnCheckedChangeListener { group, checkedId ->
 
                         when (checkedId) {
-                            R.id.rdBtnMetric -> {
+                            R.id.rdBtnMetricBMI -> {
                                 makeVisibleMetricUnitsView()
                             }
-                            R.id.rdBtnUSUnits -> {
+                            R.id.rdBtnUSUnitsBMI -> {
                                 makeVisibleUSUnitsView()
                             }
                         }
@@ -177,9 +174,9 @@ class BMICalculatorActivity : AppCompatActivity() {
 
             val bmiValue = BigDecimal(resultBMI.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
 
-            tvBMIValue.text = bmiValue
-            tvBMIType.text = bmiLabel
-            tvBMIDescription.text = bmiDescription
+             tvBMIValue.text = bmiValue
+             tvBMIType.text = bmiLabel
+             tvBMIDescription.text = bmiDescription
 
             val bmiHeight: String = heightValue.toString()
             val bmiWeight: String = weightValue.toString()
@@ -194,7 +191,7 @@ class BMICalculatorActivity : AppCompatActivity() {
 
          }
 
-    private fun validateMetricUnits(): Boolean{
+    private fun validateUnits(): Boolean{
 
         var isValid = true
 

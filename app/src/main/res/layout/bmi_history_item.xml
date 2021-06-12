@@ -46,9 +46,10 @@
                         android:layout_weight="1"
                         android:text="Height(cm)"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/textView5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.081" />
 
                     <TextView
                         android:id="@+id/tvHeightValue"
@@ -60,7 +61,9 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tvHeight"
                         app:layout_constraintVertical_bias="0.0"
-                        tools:text="186" />
+                        tools:text="186"
+                        android:textSize="12sp"/>
+
                     <TextView
                         android:id="@+id/tvWeight"
                         android:layout_width="wrap_content"
@@ -68,21 +71,27 @@
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="16dp"
                         android:text="Weight(kg)"
+                        android:textSize="12sp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvBmiState"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/tvHeight"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.066" />
 
                     <TextView
                         android:id="@+id/tvWeightValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="120dp"
+                        android:layout_marginStart="84dp"
                         android:layout_weight="1"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvHeightValue"
                         app:layout_constraintTop_toBottomOf="@+id/tvWeight"
                         app:layout_constraintVertical_bias="0.0"
-                        tools:text="70" />
+                        tools:text="70"
+                        android:textSize="12sp"/>
 
                     <TextView
                         android:id="@+id/textView5"
@@ -92,6 +101,7 @@
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
                         android:text="BMI(kg/m^2)"
+                        android:textSize="12sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -100,11 +110,15 @@
                         android:id="@+id/tvBmiValue"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="12dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tvWeightValue"
                         app:layout_constraintStart_toEndOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/tvWeightValue"
+                        app:layout_constraintVertical_bias="1.0"
                         tools:text="22.6" />
 
                     <ImageView
@@ -112,26 +126,27 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_marginEnd="4dp"
                         android:layout_weight="1"
+
                         android:src="@drawable/ic_exercise1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tvBmiState"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
+                        android:layout_width="143dp"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="2dp"
                         android:layout_weight="1"
                         android:textColor="#0091EA"
                         android:textStyle="bold"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/tvBmiValue"
-                        tools:text="VerySeverly-Overweight" />
+                        app:layout_constraintTop_toBottomOf="@+id/imageView"
+                        tools:text="Obese Class ||| (Very Severely obese)" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView

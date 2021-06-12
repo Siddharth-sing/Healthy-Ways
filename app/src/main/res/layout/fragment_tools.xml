@@ -19,9 +19,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
-            android:columnCount="2"
+            android:columnCount="1"
             android:columnOrderPreserved="false"
-            android:rowCount="4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,8 +28,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvBmi"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="12dp"
                android:layout_rowWeight="1"
@@ -39,7 +38,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/item_rectangular_color_grey_bg_tools"
+                    android:background="@drawable/item_color_accent_border_ripple_effect_tools"
                     android:elevation="5dp"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -56,12 +55,19 @@
                         android:text="BMI"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tv_bmi_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BMI"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvMacroCalc"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="12dp"
@@ -70,7 +76,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/item_rectangular_color_grey_bg_tools"
+                    android:background="@drawable/item_color_accent_border_ripple_effect_tools"
                     android:elevation="5dp"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -90,7 +96,7 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvFatCalc"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="12dp"
@@ -99,7 +105,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/item_rectangular_color_grey_bg_tools"
+                    android:background="@drawable/item_color_accent_border_ripple_effect_tools"
                     android:elevation="5dp"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -119,8 +125,8 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvOneRm"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="10dp">
@@ -128,7 +134,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/item_rectangular_color_grey_bg_tools"
+                    android:background="@drawable/item_color_accent_border_ripple_effect_tools"
                     android:elevation="5dp"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -149,8 +155,8 @@
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvCalorieCalc"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="12dp"
                 android:layout_rowWeight="1"
@@ -159,7 +165,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/item_rectangular_color_grey_bg_tools"
+                    android:background="@drawable/item_color_accent_border_ripple_effect_tools"
                     android:elevation="5dp"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -181,7 +187,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvGoalCalc"
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="12dp"
@@ -190,7 +196,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/item_rectangular_color_grey_bg_tools"
+                    android:background="@drawable/item_color_accent_border_ripple_effect_tools"
                     android:elevation="10dp"
                     android:gravity="center"
                     android:orientation="vertical">
