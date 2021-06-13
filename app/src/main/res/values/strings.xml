@@ -24,9 +24,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="oneRm_dropdown_exercises">
-        <item>Deadlift</item>
-        <item>Squats</item>
         <item>Bench Press</item>
+        <item>Squats</item>
+        <item>Deadlift</item>
         <item>Overhead Press</item>
     </string-array>
 </resources>
