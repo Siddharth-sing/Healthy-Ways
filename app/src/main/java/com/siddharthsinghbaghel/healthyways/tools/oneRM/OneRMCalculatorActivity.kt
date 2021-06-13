@@ -36,15 +36,6 @@ class OneRMCalculatorActivity : AppCompatActivity() {
 
 
 
-         /* For setting up the image according to the exercise selected */
-
-             if(currentVisibleView == METRIC_UNITS_VIEW){
-                 setSpinner(spExerciseMetric)
-
-             }else if(currentVisibleView == US_UNITS_VIEW){
-                 setSpinner(spExerciseUS)
-             }
-         /* For setting up the image according to the exercise selected */
 
         btnCalculateUnitsRM.setOnClickListener {
 
@@ -75,7 +66,13 @@ class OneRMCalculatorActivity : AppCompatActivity() {
             }
 
         }
-        makeVisibleMetricUnitsView()
+
+        /* Initializing the calculator view */
+
+            makeVisibleMetricUnitsView()
+            setSpinner(spExerciseMetric)
+
+        /* Initializing the calculator view */
 
         /* Radio btn check listener*/
 
@@ -84,32 +81,53 @@ class OneRMCalculatorActivity : AppCompatActivity() {
             when (checkedId) {
                 R.id.rdBtnMetricRM -> {
                     makeVisibleMetricUnitsView()
+
+                    /* For setting up the image according to the exercise selected */
+
+                    setSpinner(spExerciseMetric)
+
+                    /* For setting up the image according to the exercise selected */
+
                 }
                 R.id.rdBtnUSUnitsRM -> {
                     makeVisibleUSUnitsView()
+
+                    /* For setting up the image according to the exercise selected */
+
+                    setSpinner(spExerciseUS)
+
+                    /* For setting up the image according to the exercise selected */
+
                 }
             }
         }
         /* Radio btn check listener*/
 }
 
+
+
     private fun calculateOneRM(repValue: Float, weightValue: Float) {
+
 
         var resultOneRm = weightValue * 36/(37 - repValue)
 
-        if(currentVisibleView == METRIC_UNITS_VIEW)
-        {
-            resultOneRm = weightValue * 36/(37 - repValue)
+        var speedRM = (60 * resultOneRm)/100
+        var muscleRM = (80 * resultOneRm)/100
+        var strengthRM = (95 * resultOneRm)/100
 
-        }else if(currentVisibleView == US_UNITS_VIEW){
-
-            resultOneRm = weightValue * 36/(37 - repValue)
-        }
         llDisplayRMResult.visibility = View.VISIBLE
+        llAdditionalInfo.visibility = View.VISIBLE
 
         val oneRMValue = BigDecimal(resultOneRm.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
 
+        val speedRMValue = BigDecimal(speedRM.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
+        val muscleRMValue = BigDecimal(muscleRM.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
+        val strengthRMValue = BigDecimal(strengthRM.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
+
         tvRMValue.text = oneRMValue
+        tvSpeedRM.text = speedRMValue
+        tvStrengthRM.text = strengthRMValue
+        tvMuscleRM.text = muscleRMValue
 
     }
 
@@ -131,6 +149,7 @@ class OneRMCalculatorActivity : AppCompatActivity() {
 
 
         llDisplayRMResult.visibility = View.GONE
+        llAdditionalInfo.visibility = View.GONE
     }
     private fun makeVisibleUSUnitsView(){
 
@@ -149,6 +168,7 @@ class OneRMCalculatorActivity : AppCompatActivity() {
 
 
         llDisplayRMResult.visibility = View.GONE
+        llAdditionalInfo.visibility = View.GONE
     }
 
     /* VISIBILITY OF UNITS VIEWS */
@@ -189,14 +209,37 @@ class OneRMCalculatorActivity : AppCompatActivity() {
         return isValid
     }
 
-    private fun setSpinner(spinnerToSet : Spinner){
 
-        spinnerToSet.onItemSelectedListener = object : AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
+    private fun setSpinner(spExerciseToSet: Spinner?){
+
+        spExerciseToSet?.onItemSelectedListener = object : AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
-                Toast.makeText(this@OneRMCalculatorActivity,
-                        "selected item is ${parent?.getItemAtPosition(position).toString()}",
-                        Toast.LENGTH_SHORT).show()
+                if(currentVisibleView == METRIC_UNITS_VIEW){
+                    Toast.makeText(this@OneRMCalculatorActivity,
+                            "US selected item is ${parent?.getItemAtPosition(position).toString()} and position $position",
+                            Toast.LENGTH_SHORT).show()
+                }else if(currentVisibleView == US_UNITS_VIEW){
+                    Toast.makeText(this@OneRMCalculatorActivity,
+                            "Metric selected item is ${parent?.getItemAtPosition(position).toString()} and position $position",
+                            Toast.LENGTH_SHORT).show()
+                }
+
+                when (position) {
+                    0 -> {
+                        resultExerciseImage.setImageResource(R.drawable.ic_deadlift)
+
+                    }
+                    1 -> {
+                        resultExerciseImage.setImageResource(R.drawable.ic_squats)
+                    }
+                    2 -> {
+                        resultExerciseImage.setImageResource(R.drawable.ic_bench_press)
+                    }
+                    3 -> {
+                        resultExerciseImage.setImageResource(R.drawable.ic_overhear_press)
+                    }
+                }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
