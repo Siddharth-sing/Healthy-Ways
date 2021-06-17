@@ -227,16 +227,16 @@ class OneRMCalculatorActivity : AppCompatActivity() {
 
                 when (position) {
                     0 -> {
-                        resultExerciseImage.setImageResource(R.drawable.ic_bench_press)
+                        resultExerciseImage.setImageResource(R.drawable.ic_squats_1)
                     }
                     1 -> {
-                        resultExerciseImage.setImageResource(R.drawable.ic_squats)
+                        resultExerciseImage.setImageResource(R.drawable.ic_deadlift_1)
                     }
                     2 -> {
-                        resultExerciseImage.setImageResource(R.drawable.ic_deadlift)
+                        resultExerciseImage.setImageResource(R.drawable.ic_overhead_press)
                     }
                     3 -> {
-                        resultExerciseImage.setImageResource(R.drawable.ic_overhear_press)
+                        resultExerciseImage.setImageResource(R.drawable.ic_benchpress_1)
                     }
                 }
             }
