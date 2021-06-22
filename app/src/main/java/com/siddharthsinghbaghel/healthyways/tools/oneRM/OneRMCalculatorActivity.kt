@@ -109,11 +109,11 @@ class OneRMCalculatorActivity : AppCompatActivity() {
     private fun calculateOneRM(repValue: Float, weightValue: Float) {
 
 
-        var resultOneRm = weightValue * 36/(37 - repValue)
+        val resultOneRm = weightValue * 36/(37 - repValue)
 
-        var speedRM = (60 * resultOneRm)/100
-        var muscleRM = (80 * resultOneRm)/100
-        var strengthRM = (95 * resultOneRm)/100
+        val speedRM = (60 * resultOneRm)/100
+        val muscleRM = (80 * resultOneRm)/100
+        val strengthRM = (95 * resultOneRm)/100
 
         llDisplayRMResult.visibility = View.VISIBLE
         llAdditionalInfo.visibility = View.VISIBLE
