@@ -17,24 +17,29 @@
         android:id="@+id/rvAllBmiHistory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
+        android:visibility="visible"
         tools:listitem="@layout/bmi_history_item"
 
         />
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/laYoga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        app:lottie_rawRes="@raw/yoga"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        app:lottie_loop="true"
+        android:visibility="gone"/>
 
     <TextView
+        android:id="@+id/tvEmpty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Empty History"
         android:layout_gravity="center"
         android:textSize="45sp"
         android:padding="5dp"
+        android:visibility="gone"
         />
 
 </LinearLayout>

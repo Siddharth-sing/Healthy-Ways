@@ -34,6 +34,7 @@ class BMIHistoryAdapter(private val context: Context, private val listener: IBMI
 
     override fun onBindViewHolder(holder: BMIHistoryViewHolder, position: Int) {
 
+
         val currentHistory = allBmiHistory[position]
         holder.bmiValue.text = currentHistory.bmiValue
         holder.bmiState.text = currentHistory.bmiState

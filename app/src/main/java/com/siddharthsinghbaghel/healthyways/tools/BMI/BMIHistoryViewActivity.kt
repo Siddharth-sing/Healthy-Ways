@@ -2,6 +2,7 @@ package com.siddharthsinghbaghel.healthyways.tools.BMI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -41,6 +42,12 @@ class BMIHistoryViewActivity : AppCompatActivity(), BMIHistoryAdapter.IBMIHistor
         viewModel.allBmiHistory.observe(this,{
             it?.let{
                 adapter.updateList(it)
+            }
+            when {
+                it.isEmpty() -> {
+                    laYoga.visibility = View.VISIBLE
+                    tvEmpty.visibility = View.VISIBLE
+                }
             }
         })
     }

@@ -25,12 +25,12 @@ class BMICalculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmi)
 
-        setSupportActionBar(toolbar_oneRM_activity)
+        setSupportActionBar(toolbar_bmi_activity)
 
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar!!.title = "Calculator BMI"
-        toolbar_oneRM_activity.setNavigationOnClickListener {
+        toolbar_bmi_activity.setNavigationOnClickListener {
 
             onBackPressed()
         }

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        tools:context=".tools.oneRM.OneRMCalculatorActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_bodyFat_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#FFFFFF" />
+
+        <RadioGroup
+            android:id="@+id/rgUnitsBFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_bodyFat_activity"
+            android:orientation="horizontal"
+            android:background="@drawable/radio_group_bg"
+            android:layout_margin="10dp"
+            >
+            <RadioButton
+                android:id="@+id/rdBtnMetricsBFC"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_selected_bg"
+                android:text="METRIC UNITS"
+                android:gravity="center"
+                android:checked="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:button="@null"
+                />
+            <!--android:button="@null" used to avoid the radio btn circle-->
+            <RadioButton
+                android:id="@+id/rdBtnUSBFC"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_selected_bg"
+                android:text="US UNITS"
+                android:gravity="center"
+                android:checked="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:button="@null" />
+            <!--android:button="@null" used to avoid the radio btn circle-->
+
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spGender"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/rgUnitsBFC"
+            android:entries="@array/gender_array"
+            />
+
+        <LinearLayout
+            android:id="@+id/llUnitsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/spGender"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/llInchesBFC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:visibility="visible">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInchBFCWaist"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etInchBFCWaist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Waist (in inches)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInchBFCNeck"
+                    android:padding="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etInchBFCNeck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Neck (in inches)"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInchBFCHeight"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etInchBFCHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Height (in m)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInchBFCMass"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etInchBFCMassValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="weight (in kg)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llCMBFC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCMBFCWaist"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCMBFCWaist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Waist (in cm)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCMBFCNeck"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCMBFCNeck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Neck (in cm)"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCMBFCHeight"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCMBFCHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Height (in m)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCMBFCMass"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etCMBFCMassValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="weight (in kg)"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCalculateBFC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="CALCULATE"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/llDisplayRMResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F4F4F4">
+
+                <LinearLayout
+                    android:id="@+id/llResultBFC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                        <ImageView
+                            android:id="@+id/resultFatImage"
+                            android:padding="5dp"
+                            android:layout_width="255dp"
+                            android:layout_height="255dp"
+                            android:src="@drawable/ic_fat"
+                            android:layout_gravity="center"
+                        />
+                      <TextView
+                          android:id="@+id/FatPercBFC"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Fat %"
+                          android:padding="5dp"
+                          android:textColor="@color/colorAccent"
+                          android:textSize="56sp"
+                          android:textStyle="bold"
+
+                          />
+                    <TextView
+                        android:id="@+id/tvFatPercBFCValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="5.06"
+                        android:padding="5dp"
+                        android:textColor="#0091EA"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+
+                        />
+                     <TextView
+                         android:id="@+id/FatMassBFC"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:padding="8dp"
+                         android:text="Fat Mass (in Kg)"
+                         android:textColor="@color/colorAccent"
+                         android:textSize="36sp"
+                         android:layout_marginTop="24dp"
+                         android:textStyle="bold"
+
+                    />
+                    <TextView
+                        android:id="@+id/tvFatMassBFCValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2.5"
+                        android:textColor="#0091EA"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+
+                        />
+                </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

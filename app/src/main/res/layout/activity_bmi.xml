@@ -7,7 +7,7 @@
     tools:context=".tools.BMI.BMICalculatorActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_oneRM_activity"
+        android:id="@+id/toolbar_bmi_activity"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="#FFFFFF" />
@@ -16,7 +16,7 @@
         android:id="@+id/rgUnitsBMI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_oneRM_activity"
+        android:layout_below="@+id/toolbar_bmi_activity"
         android:orientation="horizontal"
         android:background="@drawable/radio_group_bg"
         android:layout_margin="10dp"

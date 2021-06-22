@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthyWays">
-        <activity android:name=".tools.oneRM.OneRMCalculatorActivity"
+        <activity android:name=".tools.bodyFat.BodyFatCalculatorActivity"></activity>
+        <activity
+            android:name=".tools.oneRM.OneRMCalculatorActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.HealthyWays"/>
+            android:theme="@style/Theme.HealthyWays" />
         <activity android:name=".tools.BMI.BMIHistoryViewActivity" />
         <activity
             android:name=".tools.BMI.BMICalculatorActivity"
