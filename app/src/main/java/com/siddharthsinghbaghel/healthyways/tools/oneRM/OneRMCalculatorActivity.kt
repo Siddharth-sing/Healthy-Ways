@@ -115,7 +115,7 @@ class OneRMCalculatorActivity : AppCompatActivity() {
         val muscleRM = (80 * resultOneRm)/100
         val strengthRM = (95 * resultOneRm)/100
 
-        llDisplayRMResult.visibility = View.VISIBLE
+        llDisplayBFResult.visibility = View.VISIBLE
         llAdditionalInfo.visibility = View.VISIBLE
 
         val oneRMValue = BigDecimal(resultOneRm.toDouble()).setScale(2, RoundingMode.HALF_EVEN).toString()
@@ -148,7 +148,7 @@ class OneRMCalculatorActivity : AppCompatActivity() {
         etMetricUnitRep.text!!.clear()
 
 
-        llDisplayRMResult.visibility = View.GONE
+        llDisplayBFResult.visibility = View.GONE
         llAdditionalInfo.visibility = View.GONE
     }
     private fun makeVisibleUSUnitsView(){
@@ -167,7 +167,7 @@ class OneRMCalculatorActivity : AppCompatActivity() {
 
 
 
-        llDisplayRMResult.visibility = View.GONE
+        llDisplayBFResult.visibility = View.GONE
         llAdditionalInfo.visibility = View.GONE
     }
 
