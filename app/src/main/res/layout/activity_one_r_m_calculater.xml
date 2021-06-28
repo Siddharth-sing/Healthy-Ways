@@ -162,7 +162,7 @@
 
 
             <LinearLayout
-                android:id="@+id/llDisplayRMResult"
+                android:id="@+id/llDisplayBFResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
