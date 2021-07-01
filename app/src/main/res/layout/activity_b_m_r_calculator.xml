@@ -17,19 +17,28 @@
 
 
         <Spinner
-            android:id="@+id/spGender"
+            android:id="@+id/spGenderBMR"
             android:layout_width="match_parent"
             android:padding="24dp"
             android:layout_height="70dp"
+            android:backgroundTint="@color/grey_blue"
             android:layout_below="@id/toolbar_bmr_activity"
-            android:entries="@array/bmr_exercise_array"
+            android:entries="@array/gender_array"
             android:layout_marginTop="24dp"        />
+
+        <Spinner
+            android:id="@+id/spExtentExercise"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/spGenderBMR"
+            android:entries="@array/bmr_exercise_array"
+            android:padding="24dp" />
 
         <LinearLayout
             android:id="@+id/llUnitsView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/spGender"
+            android:layout_below="@id/spExtentExercise"
             android:orientation="vertical"
             android:padding="10dp"
             android:visibility="visible">
@@ -50,7 +59,7 @@
                     android:visibility="visible">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etMetricBFCAge"
+                        android:id="@+id/etMetricBMRAge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Age"
@@ -66,7 +75,7 @@
                     android:visibility="visible">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etMetricBFCWeight"
+                        android:id="@+id/etMetricBMRWeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Weight(in kg)"
@@ -82,7 +91,7 @@
                     android:visibility="visible">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etMetricBFCBMI"
+                        android:id="@+id/etMetricBMRHeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Height (in cm)"
@@ -105,7 +114,7 @@
 
 
             <Button
-                android:id="@+id/btnCalculateBFC"
+                android:id="@+id/btnCalculateBMR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
@@ -133,7 +142,7 @@
                     >
 
                 <LinearLayout
-                    android:id="@+id/llResultBFC"
+                    android:id="@+id/llResultBMR"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
@@ -183,7 +192,7 @@
 
                           />
                     <TextView
-                        android:id="@+id/tvFatPercBFCValue"
+                        android:id="@+id/tvBMRValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="5.06"
@@ -223,7 +232,7 @@
 
                     />
                     <TextView
-                        android:id="@+id/tvFatMassBFCValue"
+                        android:id="@+id/tvTDEEValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="2.5"
