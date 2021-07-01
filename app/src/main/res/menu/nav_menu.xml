@@ -10,7 +10,12 @@
         android:title="@string/Exercise"
         />
     <item
+        android:id="@+id/api"
+        android:icon="@drawable/ic_deadlift"
+        android:title="@string/history"/>
+    <item
         android:id="@+id/history"
         android:icon="@drawable/ic_hist"
         android:title="@string/history"/>
+
 </menu>
