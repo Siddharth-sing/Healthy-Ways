@@ -1,5 +1,7 @@
 package com.siddharthsinghbaghel.healthyways.tools.BMR
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -109,9 +111,6 @@ class BMRCalculatorActivity : AppCompatActivity() {
         tvTDEEValue.text = resultTDEEValue
         tvBMRValue.text = resultBMRValue
 
-
-
-
     }
 
 
@@ -167,8 +166,6 @@ class BMRCalculatorActivity : AppCompatActivity() {
     }
     private fun setSpinnerExercise(spExercise: Spinner?){
 
-        llResultBMR.visibility = View.GONE
-
         spExercise?.onItemSelectedListener = object : AdapterView.OnItemClickListener, AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
@@ -201,6 +198,12 @@ class BMRCalculatorActivity : AppCompatActivity() {
 
             }
         }
+    }
+
+    fun referenceCalled(view: View) {
+
+        val intent = Intent("android.intent.action.VIEW", Uri.parse("https://steelfitusa.com/blogs/health-and-wellness/calculate-tdee"));
+        startActivity(intent)
     }
 
 
