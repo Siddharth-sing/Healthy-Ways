@@ -9,8 +9,17 @@ import android.widget.Spinner
 import android.widget.Toast
 import com.siddharthsinghbaghel.healthyways.R
 import com.siddharthsinghbaghel.healthyways.tools.BMI.BMICalculatorActivity
+import kotlinx.android.synthetic.main.activity_b_m_r_calculator.*
 import kotlinx.android.synthetic.main.activity_bmi.*
 import kotlinx.android.synthetic.main.activity_body_fat_calculator.*
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.btnCalculateBFC
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.etMetricBFCAge
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.etMetricBFCBMI
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.etMetricBFCWeight
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.llResultBFC
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.spGender
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.tvFatMassBFCValue
+import kotlinx.android.synthetic.main.activity_body_fat_calculator.tvFatPercBFCValue
 import kotlinx.android.synthetic.main.activity_one_r_m_calculater.*
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -23,12 +32,12 @@ class BodyFatCalculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_body_fat_calculator)
 
-        setSupportActionBar(toolbar_bodyFat_activity)
+        setSupportActionBar(toolbar_body_fat_activity)
 
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar!!.title = "Body Fat Percentage"
-        toolbar_bodyFat_activity.setNavigationOnClickListener {
+        toolbar_body_fat_activity.setNavigationOnClickListener {
 
             onBackPressed()
         }

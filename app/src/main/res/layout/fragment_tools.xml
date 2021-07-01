@@ -173,7 +173,7 @@
                         android:id="@+id/tv_India"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Calories Calc"
+                        android:text="BMR &amp; TDEE"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
                 </LinearLayout>

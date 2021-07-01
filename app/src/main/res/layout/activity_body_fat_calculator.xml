@@ -9,7 +9,7 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_bodyFat_activity"
+            android:id="@+id/toolbar_body_fat_activity"
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
             android:background="#FFFFFF" />
@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:padding="24dp"
             android:layout_height="70dp"
-            android:layout_below="@id/toolbar_bodyFat_activity"
+            android:backgroundTint="@color/grey_blue"
+            android:layout_below="@id/toolbar_body_fat_activity"
             android:entries="@array/gender_array"
             android:layout_marginTop="24dp"        />
 
@@ -88,32 +89,32 @@
                         android:hint="BMI"
                         android:inputType="numberDecimal"
                         android:textSize="16sp" />
-                   <LinearLayout
+                    <LinearLayout
 
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:orientation="horizontal"
-                       android:layout_gravity="center">
-                    <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:textSize="12sp"
-                        android:text="Don't have your BMI? " />
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:text="Don't have your BMI? " />
 
-                       <TextView
-                           android:id="@+id/tvBmiRedirect"
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:layout_marginTop="5dp"
-                           android:gravity="center"
-                           android:textSize="12sp"
-                           android:textColor="#0091EA"
-                           android:text="Click Here "
-                           android:onClick="bmiCalled"/>
+                        <TextView
+                            android:id="@+id/tvBmiRedirect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="#0091EA"
+                            android:text="Click Here "
+                            android:onClick="bmiCalled"/>
 
-                   </LinearLayout>
+                    </LinearLayout>
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -150,259 +151,259 @@
                     android:elevation="26dp"
                     >
 
-                <LinearLayout
-                    android:id="@+id/llResultBFC"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:id="@+id/resultFat"
-                        android:padding="5dp"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_fat"
-                        android:layout_gravity="center"
-                        android:visibility="visible"
-                        />
-                    <TextView
-                        android:id="@+id/tvInfo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="center"
-                        android:textSize="12sp"
-                        android:text="Look below for more details" />
-
-
-                      <TextView
-                          android:id="@+id/FatPercBFC"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="Fat %"
-                          android:padding="5dp"
-                          android:layout_marginTop="16dp"
-                          android:textColor="@color/colorAccent"
-                          android:textSize="46sp"
-                          android:textStyle="bold"
-
-                          />
-                    <TextView
-                        android:id="@+id/tvFatPercBFCValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="5.06"
-                        android:padding="5dp"
-                        android:textColor="#0091EA"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
-
-                        />
-                     <TextView
-                         android:id="@+id/FatMassBFC"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:padding="8dp"
-                         android:text="Fat Mass (in Kg/lbs)"
-                         android:textColor="@color/colorAccent"
-                         android:textSize="26sp"
-                         android:layout_marginTop="24dp"
-                         android:textStyle="bold"
-
-                    />
-                    <TextView
-                        android:id="@+id/tvFatMassBFCValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="2.5"
-                        android:textColor="#0091EA"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
-                        android:padding="5dp"
-
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fat% Chart"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="26sp"
-                        android:layout_marginTop="24dp"
-                        android:textStyle="bold"
-                        />
-                    <TableLayout
+                    <LinearLayout
+                        android:id="@+id/llResultBFC"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp">
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/resultFat"
+                            android:padding="5dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_fat"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            />
+                        <TextView
+                            android:id="@+id/tvInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:text="Look below for more details" />
 
 
-                        <TableRow
-                            android:background="@color/colorAccent"
-                            android:padding="10dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                android:text="Classification" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                android:text="Women (% Fat)" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/white"
-                                android:textStyle="bold"
-                                android:text="Men (% Fat)" />
+                        <TextView
+                            android:id="@+id/FatPercBFC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fat %"
+                            android:padding="5dp"
+                            android:layout_marginTop="16dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="46sp"
+                            android:textStyle="bold"
 
-                        </TableRow>
-                        <TableRow
-                            android:background="#BBDCC9"
-                            android:padding="5dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:text="Essential Fat" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:text="10-12%" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:text="2-4%" />
+                            />
+                        <TextView
+                            android:id="@+id/tvFatPercBFCValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="5.06"
+                            android:padding="5dp"
+                            android:textColor="#0091EA"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
 
-                        </TableRow>
-                        <TableRow android:background="#BBDCC9"  android:padding="5dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:layout_weight="1"
-                                android:text="Athletes" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textStyle="bold"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:text="14-20%" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:textStyle="bold"
-                                android:text="6-13%" />
+                            />
+                        <TextView
+                            android:id="@+id/FatMassBFC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="Fat Mass (in Kg/lbs)"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="26sp"
+                            android:layout_marginTop="24dp"
+                            android:textStyle="bold"
+
+                            />
+                        <TextView
+                            android:id="@+id/tvFatMassBFCValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="2.5"
+                            android:textColor="#0091EA"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fat% Chart"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="26sp"
+                            android:layout_marginTop="24dp"
+                            android:textStyle="bold"
+                            />
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp">
 
 
-                        </TableRow>
-                        <TableRow android:background="#BBDCC9"  android:padding="5dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:text="Fitness"
-                                android:textStyle="bold"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:text="21-24%"
-                                android:textStyle="bold"/>
+                            <TableRow
+                                android:background="@color/colorAccent"
+                                android:padding="10dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:text="Classification" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:text="Women (% Fat)" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:text="Men (% Fat)" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:text="14-17%"
-                                android:textStyle="bold"/>
+                            </TableRow>
+                            <TableRow
+                                android:background="#BBDCC9"
+                                android:padding="5dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="Essential Fat" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="10-12%" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="2-4%" />
 
-                        </TableRow>
+                            </TableRow>
+                            <TableRow android:background="#BBDCC9"  android:padding="5dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:layout_weight="1"
+                                    android:text="Athletes" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="14-20%" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:textStyle="bold"
+                                    android:text="6-13%" />
 
-                        <TableRow android:background="#BBDCC9"  android:padding="5dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:textStyle="bold"
-                                android:text="Acceptable" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:text="25-31%" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:textStyle="bold"
-                                android:text="18-25%" />
 
-                        </TableRow>
+                            </TableRow>
+                            <TableRow android:background="#BBDCC9"  android:padding="5dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="Fitness"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="21-24%"
+                                    android:textStyle="bold"/>
 
-                        <TableRow android:background="#BBDCC9"  android:padding="5dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:text="Obese" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textStyle="bold"
-                                android:textColor="@color/darkGrey"
-                                android:text="32% +" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textColor="@color/darkGrey"
-                                android:textStyle="bold"
-                                android:text="25% +" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="14-17%"
+                                    android:textStyle="bold"/>
 
-                        </TableRow>
+                            </TableRow>
 
-                    </TableLayout>
-                    <ImageView
-                        android:id="@+id/resultFatImage"
-                        android:padding="5dp"
-                        android:layout_width="280dp"
-                        android:layout_height="280dp"
-                        android:src="@drawable/workout1"
-                        android:layout_gravity="center"
-                        android:visibility="visible"
-                        />
-                </LinearLayout>
+                            <TableRow android:background="#BBDCC9"  android:padding="5dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:textStyle="bold"
+                                    android:text="Acceptable" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="25-31%" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:textStyle="bold"
+                                    android:text="18-25%" />
+
+                            </TableRow>
+
+                            <TableRow android:background="#BBDCC9"  android:padding="5dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="Obese" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkGrey"
+                                    android:text="32% +" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/darkGrey"
+                                    android:textStyle="bold"
+                                    android:text="25% +" />
+
+                            </TableRow>
+
+                        </TableLayout>
+                        <ImageView
+                            android:id="@+id/resultFatImage"
+                            android:padding="5dp"
+                            android:layout_width="280dp"
+                            android:layout_height="280dp"
+                            android:src="@drawable/workout1"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            />
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
