@@ -12,7 +12,7 @@
     <item
         android:id="@+id/api"
         android:icon="@drawable/ic_deadlift"
-        android:title="@string/history"/>
+        android:title="@string/api"/>
     <item
         android:id="@+id/history"
         android:icon="@drawable/ic_hist"
