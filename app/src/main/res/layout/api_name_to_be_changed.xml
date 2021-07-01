@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".navFragments.API_Frag_NameTOBeChanged">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:gravity="center"
         android:layout_width="match_parent"
