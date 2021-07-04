@@ -12,7 +12,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.siddharthsinghbaghel.healthyways.Constants
 import com.siddharthsinghbaghel.healthyways.R
+import com.siddharthsinghbaghel.healthyways.navFragments.ExerciseFragment
 import kotlinx.android.synthetic.main.activity_exercise.*
+import kotlinx.android.synthetic.main.activity_exercise_finish.*
 import kotlinx.android.synthetic.main.dialog_custom_back_conformation.*
 import kotlinx.android.synthetic.main.item_exercise_status.*
 import java.util.*
@@ -45,7 +47,6 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
             setCustomDialogBckButton()
 
-
         }
 
         tts = TextToSpeech(this,this)
@@ -56,6 +57,10 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setupRestView()
 
         setUpExerciseSetupRecyclerView()
+
+
+
+
     }
 
 
@@ -113,7 +118,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         progressBar.progress = restProgress
 
-        restTimer = object : CountDownTimer(5000, 1000) {
+        restTimer = object : CountDownTimer(1000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
                 progressBar.progress = 5 - restProgress
@@ -156,7 +161,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         progressBar.progress = exerciseProgress
 
-        exerciseTimer = object : CountDownTimer(5000, 1000) {
+        exerciseTimer = object : CountDownTimer(1000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 exerciseProgress++
 
