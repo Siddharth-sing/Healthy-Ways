@@ -19,10 +19,6 @@ class ExerciseFinishActivity : AppCompatActivity() {
         toolbar_finish_activity.setNavigationOnClickListener {
             onBackPressed()
         }
-        btnFinishExercise.setOnClickListener{
-            finish()
-            val intent = Intent(this, ExerciseFragment::class.java)
-            startActivity(intent)
-        }
+
     }
 }
