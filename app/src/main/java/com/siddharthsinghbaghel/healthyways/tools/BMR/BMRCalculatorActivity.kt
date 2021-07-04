@@ -1,11 +1,14 @@
 package com.siddharthsinghbaghel.healthyways.tools.BMR
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
+import android.widget.ScrollView
 import android.widget.Spinner
 import android.widget.Toast
 import com.siddharthsinghbaghel.healthyways.R
@@ -36,6 +39,10 @@ class BMRCalculatorActivity : AppCompatActivity() {
         setSpinnerGen(spGenderBMR)
 
         btnCalculateBMR.setOnClickListener {
+
+            bmrSv.fullScroll(ScrollView.FOCUS_DOWN);
+            hideKeyboard(it)
+
             val result = validateUnits()
 
             if(result) {
@@ -206,5 +213,12 @@ class BMRCalculatorActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+    private fun hideKeyboard(view: View) {
+        view.apply {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+    }
 
 }

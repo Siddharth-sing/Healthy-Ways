@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthyWays">
-        <activity android:name=".tools.BMR.BMRCalculatorActivity"></activity>
+        <activity android:name=".tools.idealWeight.IdealWeightActivity"></activity>
+        <activity android:name=".tools.BMR.BMRCalculatorActivity" />
         <activity android:name=".tools.bodyFat.BodyFatCalculatorActivity" />
         <activity
             android:name=".tools.oneRM.OneRMCalculatorActivity"

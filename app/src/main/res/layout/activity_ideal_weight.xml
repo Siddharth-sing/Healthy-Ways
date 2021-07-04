@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/bmrSv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -18,56 +17,51 @@
 
 
 
-        <Spinner
-            android:id="@+id/spGenderBMR"
+        <LinearLayout
+            android:id="@+id/llSp"
             android:layout_width="match_parent"
-            android:padding="24dp"
-            android:layout_height="70dp"
-            android:backgroundTint="@color/grey_blue"
+            android:layout_height="wrap_content"
             android:layout_below="@id/toolbar_bmr_activity"
-            android:entries="@array/gender_array"
-            android:layout_marginTop="24dp"        />
+            android:orientation="vertical"
+            >
+                <Spinner
+                    android:id="@+id/spGenderBMR"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_height="70dp"
+                    android:paddingTop="16dp"
+                    android:backgroundTint="@color/grey_blue"
 
-        <Spinner
-            android:id="@+id/spExtentExercise"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_below="@id/spGenderBMR"
-            android:entries="@array/bmr_exercise_array"
-            android:padding="24dp" />
+                    android:entries="@array/gender_array"
+                    android:layout_marginTop="24dp"        />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginRight="16dp"
+
+                    android:background="@color/darkGrey"/>
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:id="@+id/llUnitsView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/spExtentExercise"
+            android:layout_below="@id/llSp"
             android:orientation="vertical"
             android:padding="10dp"
             android:visibility="visible">
 
             <LinearLayout
-                android:id="@+id/llMetricBFC"
+                android:id="@+id/llIW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 tools:visibility="visible">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilMetricBFCAge"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:padding="8dp"
-                    android:layout_height="wrap_content"
-                    android:visibility="visible">
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etMetricBMRAge"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Age"
-                        android:inputType="number"
-                        android:textSize="16sp" />
-                </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilMetricBFCWeight"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -99,17 +93,46 @@
                         android:hint="Height (in cm)"
                         android:inputType="numberDecimal"
                         android:textSize="16sp" />
-                   <LinearLayout
+                    <LinearLayout
 
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:orientation="horizontal"
-                       android:layout_gravity="center">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
 
-                   </LinearLayout>
+                    </LinearLayout>
                 </com.google.android.material.textfield.TextInputLayout>
 
 
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="Converter needed for weight and/or height ?   " />
+
+                <TextView
+                    android:id="@+id/tvConverterRedirect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="#0091EA"
+                    android:textStyle="bold"
+                    android:text="Click Here "
+                    android:onClick="referenceCalled"/>
 
             </LinearLayout>
 
@@ -124,9 +147,7 @@
                 android:backgroundTint="@color/colorAccent"
                 android:text="CALCULATE"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp"
-
-                />
+                android:textSize="18sp" />
 
 
 
@@ -170,7 +191,7 @@
                         android:padding="5dp"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/ic_calorie"
+                        android:src="@drawable/ic_doc_plus"
                         android:layout_gravity="center"
                         android:visibility="visible"
                         />
@@ -190,29 +211,29 @@
                             android:orientation="vertical"
                             android:gravity="center"
                             >
-                      <TextView
-                          android:id="@+id/FatPercBFC"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="Basel Metabolic Rate (BMR)"
-                          android:padding="5dp"
-                          android:layout_marginTop="16dp"
-                          android:textColor="@color/colorAccent"
-                          android:textSize="26sp"
-                          android:textStyle="bold"
+                            <TextView
+                                android:id="@+id/FatPercBFC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Basel Metabolic Rate (BMR)"
+                                android:padding="5dp"
+                                android:layout_marginTop="16dp"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
 
-                          />
-                    <TextView
-                        android:id="@+id/tvBMRValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="5.06"
-                        android:padding="5dp"
-                        android:textColor="#0091EA"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
+                                />
+                            <TextView
+                                android:id="@+id/tvBMRValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="5.06"
+                                android:padding="5dp"
+                                android:textColor="#0091EA"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
 
-                        />
+                                />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -229,30 +250,30 @@
                             android:orientation="vertical"
                             android:gravity="center"
                             >
-                     <TextView
-                         android:id="@+id/FatMassBFC"
-                         android:gravity="center"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:padding="8dp"
-                         android:text="Total Daily Energy Expenditure(TDEE)"
-                         android:textColor="@color/colorAccent"
-                         android:textSize="24sp"
-                         android:layout_marginTop="24dp"
-                         android:textStyle="bold"
+                            <TextView
+                                android:id="@+id/FatMassBFC"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:text="Total Daily Energy Expenditure(TDEE)"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="24sp"
+                                android:layout_marginTop="24dp"
+                                android:textStyle="bold"
 
-                    />
-                    <TextView
-                        android:id="@+id/tvTDEEValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="2.5"
-                        android:textColor="#0091EA"
-                        android:textSize="26sp"
-                        android:textStyle="bold"
-                        android:padding="5dp"
+                                />
+                            <TextView
+                                android:id="@+id/tvTDEEValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="2.5"
+                                android:textColor="#0091EA"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:padding="5dp"
 
-                        />
+                                />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
