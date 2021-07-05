@@ -27,9 +27,9 @@ and easily usable tools created with 💖 and hardwork.</strong>
 </p>
 
 
-Installation : 
+<strong>⭐Installation : </strong>
 
-Usage : With the help of video one can take reference how to use this app.
+<strong>⭐Usage :</strong> With the help of video one can take reference how to use this app.
  
 
 # Best Practices Used
