@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svIw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -10,7 +11,7 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_bmr_activity"
+            android:id="@+id/toolbar_iw_activity"
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
             android:background="#64DD17" />
@@ -21,11 +22,11 @@
             android:id="@+id/llSp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar_bmr_activity"
+            android:layout_below="@id/toolbar_iw_activity"
             android:orientation="vertical"
             >
                 <Spinner
-                    android:id="@+id/spGenderBMR"
+                    android:id="@+id/spGenderIw"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="24dp"
                     android:layout_height="70dp"
@@ -63,7 +64,7 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilMetricBFCWeight"
+                    android:id="@+id/tilMetricIWWeight"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:padding="8dp"
@@ -71,7 +72,7 @@
                     android:visibility="visible">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etMetricBMRWeight"
+                        android:id="@+id/etMetricIWWeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Weight(in kg)"
@@ -79,7 +80,7 @@
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilMetricBFCBMI"
+                    android:id="@+id/tilMetricIWBMI"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:padding="8dp"
                     android:layout_width="match_parent"
@@ -87,7 +88,7 @@
                     android:visibility="visible">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/etMetricBMRHeight"
+                        android:id="@+id/etMetricIWHeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Height (in cm)"
@@ -132,14 +133,14 @@
                     android:textColor="#0091EA"
                     android:textStyle="bold"
                     android:text="Click Here "
-                    android:onClick="referenceCalled"/>
+                  />
 
             </LinearLayout>
 
 
 
             <Button
-                android:id="@+id/btnCalculateBMR"
+                android:id="@+id/btnCalculateIW"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
@@ -164,7 +165,7 @@
                 >
 
                 <LinearLayout
-                    android:id="@+id/llResultBMR"
+                    android:id="@+id/llResultIW"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
@@ -189,13 +190,12 @@
                     <ImageView
                         android:id="@+id/resultFat"
                         android:padding="5dp"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
                         android:src="@drawable/ic_doc_plus"
                         android:layout_gravity="center"
                         android:visibility="visible"
                         />
-
 
 
                     <androidx.cardview.widget.CardView
@@ -212,19 +212,19 @@
                             android:gravity="center"
                             >
                             <TextView
-                                android:id="@+id/FatPercBFC"
+                                android:id="@+id/weightMillerIW"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Basel Metabolic Rate (BMR)"
+                                android:text="By Miller Formula (in kg)"
                                 android:padding="5dp"
                                 android:layout_marginTop="16dp"
                                 android:textColor="@color/colorAccent"
-                                android:textSize="26sp"
+                                android:textSize="20sp"
                                 android:textStyle="bold"
 
                                 />
                             <TextView
-                                android:id="@+id/tvBMRValue"
+                                android:id="@+id/tvMillerValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 tools:text="5.06"
@@ -236,7 +236,6 @@
                                 />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
-
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -251,27 +250,102 @@
                             android:gravity="center"
                             >
                             <TextView
-                                android:id="@+id/FatMassBFC"
-                                android:gravity="center"
+                                android:id="@+id/weightRobinsonIW"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="8dp"
-                                android:text="Total Daily Energy Expenditure(TDEE)"
+                                android:text="By Robinson Formula (in kg)"
+                                android:padding="5dp"
+                                android:layout_marginTop="16dp"
                                 android:textColor="@color/colorAccent"
-                                android:textSize="24sp"
-                                android:layout_marginTop="24dp"
+                                android:textSize="20sp"
                                 android:textStyle="bold"
 
                                 />
                             <TextView
-                                android:id="@+id/tvTDEEValue"
+                                android:id="@+id/tvRobinValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                tools:text="2.5"
+                                tools:text="5.06"
+                                android:padding="5dp"
                                 android:textColor="#0091EA"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
+
+                                />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="26dp"
+                        android:padding="5dp"
+                        android:layout_margin="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:id="@+id/weightDevineIW"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="By Devine Formula (in kg)"
                                 android:padding="5dp"
+                                android:layout_marginTop="16dp"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+
+                                />
+                            <TextView
+                                android:id="@+id/tvDevineValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="5.06"
+                                android:padding="5dp"
+                                android:textColor="#0091EA"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+
+                                />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="26dp"
+                        android:padding="5dp"
+                        android:layout_margin="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:id="@+id/weightHamwiIW"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="By Hamwi Formula (in kg)"
+                                android:padding="5dp"
+                                android:layout_marginTop="16dp"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+
+                                />
+                            <TextView
+                                android:id="@+id/tvHamwiValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="5.06"
+                                android:padding="5dp"
+                                android:textColor="#0091EA"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
 
                                 />
                         </LinearLayout>
@@ -292,7 +366,7 @@
                         android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:textSize="12sp"
-                        android:text="For References and if you want to know about BMR and TDEE more  " />
+                        android:text="For References and if you want to know about Ideal Weight more  " />
 
                     <TextView
                         android:id="@+id/tvBmiRedirect"

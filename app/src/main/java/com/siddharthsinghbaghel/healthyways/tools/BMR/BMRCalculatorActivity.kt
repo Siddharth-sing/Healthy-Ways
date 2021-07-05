@@ -13,7 +13,6 @@ import android.widget.Spinner
 import android.widget.Toast
 import com.siddharthsinghbaghel.healthyways.R
 import kotlinx.android.synthetic.main.activity_b_m_r_calculator.*
-import kotlinx.android.synthetic.main.activity_body_fat_calculator.*
 import java.math.BigDecimal
 import java.math.RoundingMode
 
@@ -43,9 +42,7 @@ class BMRCalculatorActivity : AppCompatActivity() {
             bmrSv.fullScroll(ScrollView.FOCUS_DOWN);
             hideKeyboard(it)
 
-            val result = validateUnits()
-
-            if(result) {
+            if(validateUnits()) {
 
                 val ageValue = etMetricBMRAge.text.toString().toFloat()
                 val heightValue = etMetricBMRHeight.text.toString().toFloat()
@@ -123,7 +120,7 @@ class BMRCalculatorActivity : AppCompatActivity() {
 
     private fun validateUnits(): Boolean {
 
-        val isValid: Boolean = true
+        val isValid = true
 
         if(etMetricBMRAge.text!!.isEmpty()){
             !isValid
