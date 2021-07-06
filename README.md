@@ -29,16 +29,30 @@ and easily usable tools created with 💖 and hardwork.</strong>
 
 <strong>⭐Usage :</strong>
 
+  
+   <strong>☑ 7 Min workout :</strong>
+         
+   https://user-images.githubusercontent.com/72120258/124540859-def68000-de3d-11eb-9bae-f0c9d391f6a5.mp4
+       
+   <strong>☑ Symptom Checker API Integration :</strong>
    
-      
-
-
-
-<div style = "height: 200px; width: 50%;">
- 
-   <video>  <source src="https://user-images.githubusercontent.com/72120258/124540859-def68000-de3d-11eb-9bae-f0c9d391f6a5.mp4" type="video/mp4"> </video>
+   https://user-images.githubusercontent.com/72120258/124543210-7e1d7680-de42-11eb-8bcb-3050366c3a6e.mp4
    
-</div>
+   <strong>☑ Tools :</strong>
+   
+   https://user-images.githubusercontent.com/72120258/124543253-8f668300-de42-11eb-99ee-46d47a595b58.mp4
+  
+  <strong>☑ Room Database - Due to lack of time only BMI tool have history section :</strong>
+         
+   https://user-images.githubusercontent.com/72120258/124543036-254dde00-de42-11eb-887d-9cbf76518525.mp4
+
+
+
+
+  
+
+   
+
  
 
 # Best Practices Used
