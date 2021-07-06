@@ -59,6 +59,7 @@ and easily usable tools created with 💖 and hardwork.</strong>
 <p><br>
     🔰  <strong>MVVM Architecture</strong><br>
     🔰  <strong>Android Architecture Components - Room, ViewModels and Live Data<br>
+    🔰  <strong>Text To Speech<br>
     🔰  <strong>Material Design - To design the beautiful UI<br>
     🔰  <strong>API Integration</strong> <br>
     🔰  <strong>Bottom Navigation and fragments for better user experience</strong><br>
