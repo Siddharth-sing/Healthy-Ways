@@ -65,6 +65,11 @@ and easily usable tools created with 💖 and hardwork.</strong>
 </p>
 
 
+# Languages Selected
+   
+We have used Kotlin as a major language in this project but since kotlin is yet dependent on java, we have used java as well at some points for smooth user and developer experience. Also Kotlin is official language for android app development declared by google, so we chose to work with Kotlin by implementing every possible good practice in it. 
+
+   
 # Challenges Faced:
 
 The main challenge we faced was the lack of time, some parts of our app are not yet completed but with good team spirit we completed all the essential parts of the app.
