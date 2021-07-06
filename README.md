@@ -27,7 +27,18 @@ and easily usable tools created with 💖 and hardwork.</strong>
 </p>
 
 
-<strong>⭐Usage :</strong> With the help of video one can take reference how to use this app.
+<strong>⭐Usage :</strong>
+
+   
+      
+
+
+
+<div style = "height: 200px; width: 50%;">
+ 
+   <video>  <source src="https://user-images.githubusercontent.com/72120258/124540859-def68000-de3d-11eb-9bae-f0c9d391f6a5.mp4" type="video/mp4"> </video>
+   
+</div>
  
 
 # Best Practices Used
@@ -43,5 +54,14 @@ and easily usable tools created with 💖 and hardwork.</strong>
 # Challenges Faced:
 
 The main challenge we faced was the lack of time, some parts of our app are not yet completed but with good team spirit we completed all the essential parts of the app.
+   
+   
+   
+   
+   
+
+
+
+
 ‍
 
