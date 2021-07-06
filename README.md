@@ -27,8 +27,6 @@ and easily usable tools created with 💖 and hardwork.</strong>
 </p>
 
 
-<strong>⭐Installation : </strong>
-
 <strong>⭐Usage :</strong> With the help of video one can take reference how to use this app.
  
 
