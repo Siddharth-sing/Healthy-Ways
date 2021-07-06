@@ -63,6 +63,7 @@ and easily usable tools created with 💖 and hardwork.</strong>
     🔰  <strong>Material Design - To design the beautiful UI<br>
     🔰  <strong>API Integration</strong> <br>
     🔰  <strong>Bottom Navigation and fragments for better user experience</strong><br>
+    🔰  <strong>Lottie Animations</strong> <br>
 </p>
 
 
