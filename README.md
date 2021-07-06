@@ -19,11 +19,11 @@ and easily usable tools created with 💖 and hardwork.</strong>
 </p>
 <strong>⭐ Informative Tools Used In App :</strong>
 <p><br>
-    🔰  <strong>Ideal Weight Calculator</strong> - Calculate How much should You weigh for your height and age .<br>
+    🔰  <strong>Ideal Weight Calculator</strong> - Calculates how much you should weigh for your height and age. .<br>
     🔰  <strong>BMI Calculator</strong> - Monitor your Body Mass Index regularly with ease.<br>
     🔰  <strong>Fat Calculator</strong> - It helps to monitor fat % as well as fat mass in body regularly and easily.<br>
     🔰  <strong>1RM Calculator</strong> - Get your 1Rep Max and train yourself for the body shape you love.<br>
-    🔰  <strong>BMR & TDEE</strong> - Know your Basel Metabolic Rate ad the Total Daily Energy Expenditute
+    🔰  <strong>BMR & TDEE</strong> - Know your Basel Metabolic Rate and the Total Daily Energy Expenditure.<br>
 </p>
 
 
